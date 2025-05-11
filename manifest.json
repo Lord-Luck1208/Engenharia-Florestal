@@ -1,0 +1,21 @@
+{
+  "name": "Sistema Madeireira",
+  "short_name": "Madeireira",
+  "description": "Sistema de gestão para madeireira",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4e7c4e",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

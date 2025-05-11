@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Árvore - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Árvore</h2>
+        <form id="cadastroArvoreForm">
+            <label for="ut">Unidade de Trabalho (UT)</label>
+            <input type="number" id="ut" name="ut" required>
+
+            <label for="faixa">Faixa</label>
+            <input type="number" id="faixa" name="faixa" required>
+
+            <label for="num_arvore">Número da Árvore</label>
+            <input type="number" id="num_arvore" name="num_arvore" required>
+
+            <label for="especie">Espécie</label>
+            <input type="text" id="especie" name="especie" required>
+
+            <div class="form-group">
+                <label for="cap">Circunferência Altura do Peito (CAP):</label>
+                <input type="number" id="cap" name="cap" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura:</label>
+                <input type="number" id="altura" name="altura" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="fuste">Fuste:</label>
+                <input type="number" id="fuste" name="fuste" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="xb">Xb:</label>
+                <input type="number" id="xb" name="xb" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="yf">Yf:</label>
+                <input type="number" id="yf" name="yf" step="0.1" required>
+            </div>
+
+            <label for="observacao">Observação</label>
+            <input type="text" id="observacao" name="observacao">
+
+            <label for="coordenadas">Coordenadas</label>
+            <input type="text" id="coordenadas" name="coordenadas" placeholder="Localização Geográfica">
+
+            <label for="foto">Foto da Árvore</label>
+            <input type="file" id="foto" name="foto" accept="image/*" capture="environment">
+
+            <div class="botoes">
+                <button type="submit">Cadastrar Árvore</button>
+                <button type="button" onclick="window.location.href='selecao_imovel.html'" style="background-color: #666; color: white;">Voltar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

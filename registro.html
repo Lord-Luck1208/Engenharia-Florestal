@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+            <label for="cadastro_nome">Nome</label>
+            <input type="text" id="cadastro_nome" name="cadastro_nome" required>
+
+            <label for="cadastro_email">E-mail</label>
+            <input type="email" id="cadastro_email" name="cadastro_email" required>
+
+            <label for="cadastro_senha">Senha</label>
+            <input type="password" id="cadastro_senha" name="cadastro_senha" required>
+
+            <label for="cadastro_tipo">Tipo de Conta</label>
+            <select id="cadastro_tipo" name="cadastro_tipo" required>
+                <option value="usuario">Usuário</option>
+                <option value="administrador">Administrador</option>
+            </select>
+
+            <div class="botoes">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+        <p style="margin-top:18px;text-align:center;">
+            Já tem conta? <a href="login.html">Faça login</a>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

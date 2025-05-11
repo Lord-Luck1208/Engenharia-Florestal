@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Imóvel - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Seleção de Imóvel</h2>
+        <form id="selecaoImovelForm">
+            <label for="imovel">Escolha um imóvel cadastrado:</label>
+            <select id="imovel" name="imovel" required>
+                <option value="">Selecione...</option>
+                <option value="imovel1"></option>
+                <option value="imovel2">Imóvel 2 - UPA B - 2024 - Maria Souza</option>
+                <option value="imovel3">Imóvel 3 - UPA C - 2022 - Pedro Lima</option>
+            </select>
+            <div class="botoes">
+                <button type="submit">Selecionar</button>
+                <button type="button" onclick="window.location.href='painel.html'">Voltar</button>
+            </div>
+        </form>
+        <div id="arvores-container" style="margin-top: 24px; display: none;">
+            <h3>Árvores cadastradas neste imóvel</h3>
+            <input type="text" id="filtro_numero" placeholder="Filtrar por número da árvore..." style="width: 100%; margin-bottom: 12px;">
+            <ul id="lista_arvores"></ul>
+            <button id="btnNovaArvore" style="margin-top: 12px;">Cadastrar Nova Árvore</button>
+        </div>
+        <div id="modal-arvore" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);z-index:1000;align-items:center;justify-content:center;">
+            <div style="background:#fff;padding:24px 18px 18px 18px;border-radius:10px;max-width:350px;width:90vw;position:relative;box-shadow:0 4px 24px rgba(34,49,34,0.18);max-height:80vh;overflow-y:auto;">
+                <button id="fechar-modal-arvore" style="position:absolute;top:8px;right:12px;font-size:1.2rem;background:none;border:none;cursor:pointer;">&times;</button>
+                <div id="detalhes-arvore"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

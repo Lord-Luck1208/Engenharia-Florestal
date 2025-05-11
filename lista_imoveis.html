@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Imóveis - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Imóveis Cadastrados</h2>
+        <div id="lista-imoveis" style="margin-top:24px;"></div>
+        <div class="botoes" style="display:flex;justify-content:center;margin-top:18px;gap:12px;">
+            <button onclick="window.location.href='painel.html'">Voltar ao Painel</button>
+        </div>
+    </div>
+    <div id="modal-editar-imovel" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Editar Imóvel</h3>
+            <form id="form-editar-imovel">
+                <input type="hidden" id="edit_imovel_id">
+                <div class="form-group">
+                    <label for="edit_imovel">Imóvel:</label>
+                    <input type="text" id="edit_imovel" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_ano">Ano:</label>
+                    <input type="number" id="edit_ano" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_upa">UPA:</label>
+                    <input type="text" id="edit_upa" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_proprietario">Proprietário:</label>
+                    <input type="text" id="edit_proprietario" required>
+                </div>
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="fecharModalImovel()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Administrativas - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Imóveis Registrados</h2>
+        
+        <!-- Seção de Download -->
+        <h3>Download de Relatórios</h3>
+        <form id="filtroForm">
+            <div class="form-group">
+                <label for="selectImovel">Selecione o Imóvel:</label>
+                <select id="selectImovel" style="width: 100%; padding: 8px; margin-bottom: 15px;">
+                    <option value="">Selecionar...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="imovel">Imóvel:</label>
+                <input type="text" id="imovel" readonly>
+            </div>
+            <div class="form-group">
+                <label for="upa">UPA:</label>
+                <input type="text" id="upa" readonly>
+            </div>
+            <div class="form-group">
+                <label for="ano">Ano:</label>
+                <input type="number" id="ano" readonly>
+            </div>
+            <div class="form-group">
+                <label for="proprietario">Proprietário:</label>
+                <input type="text" id="proprietario" readonly>
+            </div>
+            <div class="botoes">
+                <button type="submit">Pesquisar</button>
+                <button type="button" id="btnDownloadExcel">Baixar Planilha Excel</button>
+            </div>
+        </form>
+        <div id="resultados" style="margin-top:24px;"></div>
+        <div class="botoes" style="display:flex;justify-content:center;margin-top:18px;gap:12px;">
+            <button onclick="window.location.href='painel.html'">Voltar ao Painel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

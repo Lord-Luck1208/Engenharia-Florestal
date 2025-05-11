@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados - Sistema Madeireira</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="usuarios-cadastrados">
+    <div class="container">
+        <h2>Usuários Cadastrados</h2>
+        <div id="tabela-usuarios"></div>
+        <div style="display:flex;justify-content:center;margin-top:18px;">
+            <button onclick="window.location.href='painel.html'">Voltar ao Painel</button>
+        </div>
+    </div>
+    <div id="modal-editar" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Editar Usuário</h3>
+            <form id="form-editar">
+                <input type="hidden" id="edit_id">
+                <div class="form-group">
+                    <label for="edit_nome">Nome:</label>
+                    <input type="text" id="edit_nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_email">E-mail:</label>
+                    <input type="email" id="edit_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit_senha">Nova Senha:</label>
+                    <input type="password" id="edit_senha" placeholder="Deixe em branco para manter a senha atual">
+                </div>
+                <div class="form-group">
+                    <label for="edit_tipo">Tipo de Conta:</label>
+                    <select id="edit_tipo" required>
+                        <option value="usuario">Usuário</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="fecharModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
